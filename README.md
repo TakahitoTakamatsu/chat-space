@@ -2,8 +2,8 @@ groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|users|references|null: false, foreign_key: true|
-|groups|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 Association
 - belongs_to :group
@@ -32,6 +32,7 @@ groupsテーブル
 Association
 - has_many :messages
 - has_many :users, through::groups_users
+- has_many :groups_users
 
 
 messagesテーブル
