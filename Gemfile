@@ -62,3 +62,7 @@ gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 
+group :test, :development do 
+  gem 'capybara'
+end
+
