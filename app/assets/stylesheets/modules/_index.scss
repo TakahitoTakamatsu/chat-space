@@ -7,65 +7,66 @@
   color: white;
   float: left;
 
-.side-header{
-  background-color: #253141;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
+  .side-header{
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
 
-    &__box{
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      font-weight: bold;
-      &__menu{
+      &__box{
         display: flex;
-        color: white;
-        list-style: none;
-        .list {
-          display: inline-block;
-        }
-        .icon {
+        justify-content: space-between;
+        width: 100%;
+        font-weight: bold;
+        &__menu{
+          display: flex;
           color: white;
-          font-size: 16px;
-          margin-bottom: 4.8;
+          list-style: none;
+          .list {
+            display: inline-block;
+          }
+          .icon {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 4.8;
+          }
         }
       }
+    
+      ul.side-header__box__menu{
+      color: white;
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      }
+        
     }
-  
-    ul.side-header__box__menu{
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+    .chat-side__groups{
+      color: white;
+      height: calc( 100vh -  100px);
+      background-color: #2f3e51;
+      padding: 20px 20px 0;
+      overflow: scroll;
+    
+      .group__name{
+        color: white;
+      }
+      .group__message{
+        color: white;
+        margin-bottom: 40px;
+      }
     }
-      
-  }
-  .chat-side__groups{
-    height: calc( 100vh -  100px);
-    background-color: #2f3e51;
-    padding: 20px 20px 0;
-    overflow: scroll;
-  
-    .group__name{
-      @import "group__name";
-    }
-    .group__message{
-      @import "group__message";
-      margin-bottom: 40px;
-    }
-  }
-
 }
 
 .main-side{
   width: calc( 100vw -  300px);
-  float: left;
+  float: right;
 
 
   .main-header{
-    background-color: white;
+    background-color: gray;
     height: 100px;
     width: calc( 100vw -  300px);
     display: flex;
