@@ -4,7 +4,6 @@ $(function() {
     todo = $('.form__message').val();
     console.log(todo);
     $("#submit").prop("disabled", false){
-      
     };
   });
 });
