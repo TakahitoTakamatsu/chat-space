@@ -5,24 +5,15 @@
     .main-header
       .main-header__leftbox
         %h2.main-header__leftbox__corrent-group
-          ユーザーネーム
+          = @group.name
         %ul.main-header__leftbox__member-list
-          メンバー:
-          %li.main-header__leftbox__member-list__member
-            ユーザーネーム
-      .main-header__edit-btn
-        Edit
+          = "Menbers: #{@menbers}"
+      .main-header__rightbox
+        .main-header__rightbox__edit-btn
+          = link_to "Edit", edit_group_path(@group.id),class:"main-header__edit-btn"
 
     .messages
-      = render @messages
-      .messages__datamessage__id
-        .messages__upper__info
-          %p.messages__upper__info__talker
-            ユーザーネーム
-          %p.messages__upper__info__date
-            日付
-        %p.messages__text
-          テキスト
+      = render partial: 'message', collection: @messages
 
   .form
     = form_for [@group, @message] do |f|
