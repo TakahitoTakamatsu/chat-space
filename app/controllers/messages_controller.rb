@@ -4,12 +4,13 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    @menbers = group_menber(@group)
+    @members = group_member(@group)
   end
 
   def create
     @message = @group.messages.new(message_params)
     if @message.save
+      
       respond_to do |format|
         format.html { redirect_to "group_messages_path(params[:group_id])" }
         format.json
@@ -31,11 +32,11 @@ class MessagesController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 
-  def group_menber(group)
-    menbers = []
-    group.users.each do |menber|
-      menbers << menber.name
+  def group_member(group)
+    members = []
+    group.users.each do |member|
+      members << member.name
     end
-    menbers = menbers.join(" ")
+    members = members.join(" ")
   end
 end
