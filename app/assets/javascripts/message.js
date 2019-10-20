@@ -39,13 +39,15 @@ $(function() {
           contentType: false
         })
         .done(function(data){
+          console.log(data.content);
+          console.log(data.image);
           var html = buildHTML(data);
           $('.messages').append(html)
           $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
           $('form')[0].reset();
         })
         .fail(function() {
-          alert('メッセージを入力してください');
+          alert('error');
         });
       return false;
       });
