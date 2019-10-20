@@ -13,14 +13,16 @@ $(function() {
                           ${message.name}
                         </div>
                         <div class="messages__upper__info__date">
-                          ${message.created_at}
+                          ${message.date}
                         </div>
                       </div>
                       <div class="messages__lower__info">
                         <p class="messages__text">
                           ${content}
+                          </p>
+                          <div class="imagebox">
                           ${image}
-                        </p>
+                          </div>
                       </div>
                     </div>`
         return html;
