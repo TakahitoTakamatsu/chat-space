@@ -33,10 +33,6 @@ class MessagesController < ApplicationController
   end
 
   def group_member(group)
-    members = []
-    group.users.each do |member|
-      members << member.name
-    end
-    members = members.join(" ")
+    group.users.pluck(:name)
   end
 end
