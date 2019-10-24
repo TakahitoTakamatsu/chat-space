@@ -22,7 +22,7 @@ $(function() {
                       </div>
                     </div>`
         return html;
-      };
+      }
       
     
       $('#new_message').on('submit', function(e) {
@@ -47,7 +47,7 @@ $(function() {
         .fail(function() {
           alert('error');
         });
-      return false;
+        return false;
       });
   
       var reloadMessages = function () {
