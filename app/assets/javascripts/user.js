@@ -26,7 +26,6 @@ $(function(){
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
-    // console.log('hoge');  //検索フォーム入力内容を取得
     
     $.ajax({
       type: 'GET',
