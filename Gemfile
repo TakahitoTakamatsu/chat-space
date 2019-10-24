@@ -63,8 +63,8 @@ gem 'haml-rails'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'erb2haml'
 
 group :test, :development do 
   gem 'capybara'
 end
-
